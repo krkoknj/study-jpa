@@ -51,6 +51,7 @@ public class JpaMain {
     System.out.println("findMember.getAge() = " + findMember.getAge());
 
     // 목록 조회
+                                            // 여기서 Member는 Entity 객체를 의미 JPQL은 TABLE을 알지 못함
     List<Member> members = em.createQuery("SELECT m FROM Member m", Member.class).getResultList();
     System.out.println("members.size() = " + members.size());
 
